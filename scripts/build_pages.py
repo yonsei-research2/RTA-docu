@@ -12,7 +12,7 @@ DIRECT_PATH = "직접 경로 입력"
 NOTICE = ('<!doctype html><html lang="ko"><head><meta charset="utf-8">'
           '<meta name="viewport" content="width=device-width,initial-scale=1">'
           '<meta name="robots" content="noindex,nofollow"><title>페이지 안내</title>'
-          '</head><body><p>개별 링크로 접속해 주세요.</p></body></html>')
+          '</head><body><p>전달받은 개별 링크로 접속해 주세요.</p></body></html>')
 
 
 def html_files(source):
