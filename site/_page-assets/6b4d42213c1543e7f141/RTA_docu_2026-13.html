@@ -163,6 +163,7 @@ td.wide { background:rgba(47,111,214,.05); } td.narrow { background:rgba(46,154,
 #scopusNote p { margin:0 0 8px; font-size:14.5px; line-height:1.7; color:#3d4a5c; }
 .snList { margin:0 0 16px; padding-left:22px; font-size:14.5px; line-height:1.7; color:#3d4a5c; }
 .snLib { color:#1f5fa8; text-decoration:underline; text-underline-offset:3px; }
+.snTip { font-size:13px !important; color:#6b7788 !important; margin:-4px 0 10px !important; line-height:1.6 !important; }
 .snNote { font-size:13px; color:#6b7788; }
 .snBtns { display:flex; justify-content:flex-end; gap:8px; }
 .snBtns button, .snGo { font:inherit; font-size:14px; font-weight:700; border-radius:8px; padding:7px 14px; cursor:pointer; text-decoration:none; }
@@ -170,6 +171,15 @@ td.wide { background:rgba(47,111,214,.05); } td.narrow { background:rgba(46,154,
 .snGo { background:#1f5fa8; border:1px solid #1f5fa8; color:#fff; }
 .go { color:var(--accent); background:var(--secbg); border:1px solid var(--accent2); padding:4px 13px; font-size:13px; }
 .go:hover { color:#fff; background:var(--accent); border-color:var(--accent); }
+/* compact Scopus notice: fits one screen */
+#scopusNote { padding:16px 18px 14px !important; max-height:calc(100vh - 24px); }
+#scopusNote h3 { font-size:15.5px !important; margin:0 0 6px !important; }
+#scopusNote p { font-size:13.5px !important; line-height:1.5 !important; margin:0 0 6px !important; }
+#scopusNote .snTip { font-size:12px !important; line-height:1.45 !important; margin:0 0 8px !important; }
+#scopusNote .snList { font-size:13.5px !important; line-height:1.5 !important; margin:0 0 10px !important; padding-left:18px !important; }
+#scopusNote .snList li + li { margin-top:4px; }
+#scopusNote .snNote { font-size:12px !important; }
+.snBtns button, .snGo { padding:6px 12px !important; font-size:13.5px !important; }
 </style>
 </head>
 <body>
@@ -310,10 +320,11 @@ td.wide { background:rgba(47,111,214,.05); } td.narrow { background:rgba(46,154,
 <dialog id="scopusNote" aria-labelledby="snTitle">
   <h3 id="snTitle">Scopus 문헌 목록 열기 안내</h3>
   <p>Scopus는 <b>교내 인터넷망</b>에서 접속하면 바로 볼 수 있습니다.</p>
+  <p class="snTip">※ 교내에서 접속했는데 로그인 창이 뜨면, 브라우저의 시크릿 모드로 열거나 쿠키를 삭제한 뒤 다시 접속해 주세요.</p>
   <p class="snSub"><b>교외</b>에서는 다음 중 한 가지 방법으로 이용할 수 있습니다.</p>
   <ol class="snList">
     <li><a class="snLib" href="https://library.yonsei.ac.kr/login" target="_blank" rel="noopener"><b>연세대학교 도서관 홈페이지</b> ↗</a>에 로그인 후 이용<br><span class="snNote">로그인하면 교외접속이 자동으로 인증됩니다.</span></li>
-    <li><b>Scopus 개인 계정</b>으로 로그인 후 이용<br><span class="snNote">계정이 없으면 Scopus에서 회원가입 후 로그인하면 됩니다.</span></li>
+    <li><b>Scopus 개인 계정</b>으로 로그인 후 이용<br><span class="snNote">계정이 없으면 Scopus에서 회원가입이 필요합니다.</span></li>
   </ol>
   <div class="snBtns">
     <button type="button" class="snClose">닫기</button>
